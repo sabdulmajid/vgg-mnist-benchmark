@@ -147,6 +147,7 @@ def main():
     }
     
     print(f'\nTraining for {num_epochs} epochs...')
+    print(f'Dataset: {len(train_dataset)} training samples, {len(test_dataset)} test samples')
     for epoch in range(num_epochs):
         train_loss, train_acc = train_epoch(model, train_loader, criterion, optimizer, device)
         test_loss, test_acc = evaluate(model, test_loader, criterion, device)

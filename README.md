@@ -16,6 +16,11 @@ The resize to 32×32 is necessary because VGG11 has 5 max-pooling layers (stride
 ## Setup
 
 ```bash
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
 pip install -r requirements.txt
 ```
 

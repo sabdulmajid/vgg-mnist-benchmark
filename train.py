@@ -130,8 +130,8 @@ def main():
     train_dataset = datasets.MNIST('./data', train=True, download=True, transform=transform)
     test_dataset = datasets.MNIST('./data', train=False, transform=transform)
     
-    train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True, num_workers=2)
-    test_loader = DataLoader(test_dataset, batch_size=128, shuffle=False, num_workers=2)
+    train_loader = DataLoader(train_dataset, batch_size=128, shuffle=True, num_workers=0)
+    test_loader = DataLoader(test_dataset, batch_size=128, shuffle=False, num_workers=0)
     
     model = VGG11(num_classes=10).to(device)
     criterion = nn.CrossEntropyLoss()

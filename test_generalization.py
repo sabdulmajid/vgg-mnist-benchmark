@@ -8,7 +8,7 @@ from train import VGG11
 
 def test_with_transform(model, transform, device, description):
     test_dataset = datasets.MNIST('./data', train=False, transform=transform)
-    test_loader = DataLoader(test_dataset, batch_size=128, shuffle=False, num_workers=2)
+    test_loader = DataLoader(test_dataset, batch_size=128, shuffle=False, num_workers=0)
     
     model.eval()
     correct = 0
